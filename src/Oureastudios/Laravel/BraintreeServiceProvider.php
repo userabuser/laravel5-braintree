@@ -1,4 +1,4 @@
-<?php namespace Bradleyboy\Laravel;
+<?php namespace Oureastudios\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -20,7 +20,7 @@ class BraintreeServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('bradleyboy/laravel-braintree');
+		$this->package('oureastudios/laravel-braintree');
 
 		Braintree_Configuration::environment(
 			$this->app['config']->get('laravel-braintree::braintree.environment')
