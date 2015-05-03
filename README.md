@@ -54,7 +54,7 @@ Below is an example:
 
 #### braintree.js (v1)
 
-If you are using the lagacy version of [braintree.js (v1)](https://www.braintreepayments.com/braintrust/braintree-js) you can output your client side encryption key into your blade views.
+If you are using the lagacy version [braintree.js (v1)](https://www.braintreepayments.com/braintrust/braintree-js), you can output your client side encryption key into your blade views.
 
 The service provider extends the blade view to allow you to use the '@braintreeClientSideEncryptionKey' to output the CSE Key from your config file.
 
