@@ -3,8 +3,14 @@
     "description": "",
     "authors": [
         {
-            "name": "Tameem Safi",
-            "email": "tameemsafi@live.co.uk"
+            [ 
+                "name": "Tameem Safi",
+                "email": "tameemsafi@live.co.uk"
+            ],
+            [
+                "name": "Brad Daily",
+                "email": "brad@bradleyboy.com"
+            ]
         }
     ],
     "require": {
