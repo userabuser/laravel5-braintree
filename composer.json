@@ -1,6 +1,9 @@
 {
     "name": "oureastudios/laravel-braintree",
     "description": "Braintree Service Provider for Laravel 5",
+    "keywords": ["braintree","braintree laravel 5"],
+    "homepage": "https://github.com/oureastudios/laravel-braintree",
+    "license": "MIT",
     "authors": [
         {
             "name": "Tameem Safi",
