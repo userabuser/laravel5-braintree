@@ -27,7 +27,7 @@ Once installed, add the ServiceProvider to your provider array within `config/ap
 
 ### Configuration
 
-To publish a boilerplate configuration file, run:
+To publish a the package configuration file, run:
 
 ```shell
 php artisan vendor:publish
