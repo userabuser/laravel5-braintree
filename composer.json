@@ -1,5 +1,5 @@
 {
-    "name": "oureastudios/laravel-braintree",
+    "name": "oureastudios/laravel5-braintree",
     "description": "Braintree Service Provider for Laravel 5",
     "keywords": ["braintree","braintree laravel 5"],
     "homepage": "https://github.com/oureastudios/laravel-braintree",
