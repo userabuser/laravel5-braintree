@@ -1,16 +1,17 @@
 {
     "name": "oureastudios/laravel-braintree",
-    "description": "",
+    "description": "Braintree Service Provider for Laravel 5",
     "authors": [
         {
-            [ 
-                "name": "Tameem Safi",
-                "email": "tameemsafi@live.co.uk"
-            ],
-            [
-                "name": "Brad Daily",
-                "email": "brad@bradleyboy.com"
-            ]
+            "name": "Tameem Safi",
+            "email": "tameemsafi@live.co.uk"
+            "homepage": "http://oureastudios.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Brad Daily",
+            "email": "brad@bradleyboy.com"
+            "role": "Developer"
         }
     ],
     "require": {
