@@ -4,6 +4,8 @@ use Illuminate\Support\ServiceProvider;
 
 use Braintree_Configuration;
 
+use Blade;
+
 class BraintreeServiceProvider extends ServiceProvider {
 
 	/**
@@ -20,34 +22,36 @@ class BraintreeServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('oureastudios/laravel-braintree');
+		
+		$this->publishes([
+		    __DIR__.'/../../config/braintree.php' => config_path('oureastudios.braintree.php'),
+		]);
 
 		Braintree_Configuration::environment(
-			$this->app['config']->get('laravel-braintree::braintree.environment')
+			$this->app['config']->get('oureastudios.braintree.environment')
 		);
 		
 		Braintree_Configuration::merchantId(
-			$this->app['config']->get('laravel-braintree::braintree.merchantId')
+			$this->app['config']->get('oureastudios.braintree.merchantId')
 		);
 
 		Braintree_Configuration::publicKey(
-			$this->app['config']->get('laravel-braintree::braintree.publicKey')
+			$this->app['config']->get('oureastudios.braintree.publicKey')
 		);
 
 		Braintree_Configuration::privateKey(
-			$this->app['config']->get('laravel-braintree::braintree.privateKey')
+			$this->app['config']->get('oureastudios.braintree.privateKey')
 		);
 
-		$encryptionKey = $this->app['config']->get('laravel-braintree::braintree.clientSideEncryptionKey');
+		$encryptionKey = $this->app['config']->get('oureastudios.braintree.clientSideEncryptionKey');
 
-		// Register blade compiler for the Stripe publishable key.
-		$blade = $this->app['view']->getEngineResolver()->resolve('blade')->getCompiler();
-		$blade->extend(function($value, $compiler) use($encryptionKey)
-		{
-			$matcher = "/(?<!\w)(\s*)@braintreeClientSideEncryptionKey/";
+		Blade::extend(function($view, $compiler) use($encryptionKey)
+        {
 
-			return preg_replace($matcher, $encryptionKey, $value);
-		});
+        	$matcher = "/(?<!\w)(\s*)@braintreeClientSideEncryptionKey/";
+
+			return preg_replace($matcher, $encryptionKey, $view);
+        });
 	}
 
 	/**
