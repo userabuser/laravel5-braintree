@@ -3,6 +3,7 @@
 use Illuminate\Support\ServiceProvider;
 
 use Braintree_Configuration;
+use Braintree_ClientToken;
 
 use Blade;
 
@@ -51,6 +52,14 @@ class BraintreeServiceProvider extends ServiceProvider {
         	$matcher = "/(?<!\w)(\s*)@braintreeClientSideEncryptionKey/";
 
 			return preg_replace($matcher, $encryptionKey, $view);
+        });
+
+        Blade::extend(function($view, $compiler)
+        {
+
+        	$matcher = "/(?<!\w)(\s*)@braintreeClientToken/";
+
+			return preg_replace($matcher, Braintree_ClientToken::generate(), $view);
         });
 	}
 

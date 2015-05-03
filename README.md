@@ -3,20 +3,20 @@ Braintree for Laravel 5
 
 ### Installation
 
-In your Laravel project's composer.json file, add `laravel-braintree` as a dependency in the require object:
+In your Laravel project's composer.json file, add `oureastudios/laravel-braintree` as a dependency in the require object:
 
 ```js
 "oureastudios/laravel-braintree": "dev-master"
 ```
     
-You do *not* need to add any other dependencies, as `laravel-braintree` loads in the other dependencies automatically.
+You do *not* need to add any other dependencies, as `oureastudios/laravel-braintree` loads in the other dependencies automatically.
 
 Finally, do a `composer update`.
 
-Once installed, add the ServiceProvider to your provider array within `app/config/app.php`:
+Once installed, add the ServiceProvider to your provider array within `config/app.php`:
 
 ```php
-''providers' => [
+'providers' => [
 	....
 	/*
 	 * Braintree Service Provider
@@ -39,9 +39,22 @@ Then open `config/oureastudios.braintree.php` to setup your environment and keys
 
 Once setup, you can use the Braintree PHP classes as spelled out in the [documentation](https://www.braintreepayments.com/docs/php/transactions/overview).
 
-#### braintree.js
+#### braintree.js (v2)
 
-If you are using [braintree.js](https://www.braintreepayments.com/docs/javascript), you can easily output your client side encryption key in your Blade views.
+If you are using [braintree.js](https://www.braintreepayments.com/docs/javascript), you can easily output a generated client token using '@braintreeClientToken'.
+
+Below is an example:
+
+~~~html
+<script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+<script>
+	braintree.setup("@braintreeClientToken", "<integration>", options);
+</script>
+~~~
+
+#### braintree.js (v1)
+
+If you are using the lagacy version of braintree.js [documentation](https://www.braintreepayments.com/braintrust/braintree-js) you can output your client side encryption key into your blade views.
 
 The service provider extends the blade view to allow you to use the '@braintreeClientSideEncryptionKey' to output the CSE Key from your config file.
 
