@@ -3,13 +3,13 @@ Braintree for Laravel 5
 
 ### Installation
 
-In your Laravel project's composer.json file, add `oureastudios/laravel-braintree` as a dependency in the require object:
+In your Laravel project's composer.json file, add `oureastudios/laravel5-braintree` as a dependency in the require object:
 
 ```js
-"oureastudios/laravel-braintree": "dev-master"
+"oureastudios/laravel5-braintree": "dev-master"
 ```
     
-You do *not* need to add any other dependencies, as `oureastudios/laravel-braintree` loads in the other dependencies automatically.
+You do *not* need to add any other dependencies, as `oureastudios/laravel5-braintree` loads in the other dependencies automatically.
 
 Finally, do a `composer update`.
 
