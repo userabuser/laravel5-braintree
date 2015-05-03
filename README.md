@@ -41,7 +41,7 @@ Once setup, you can use the Braintree PHP classes as spelled out in the [documen
 
 #### braintree.js (v2)
 
-If you are using [braintree.js](https://www.braintreepayments.com/docs/javascript), you can easily output a generated client token using '@braintreeClientToken'.
+If you are using [braintree.js (v2)](https://www.braintreepayments.com/docs/javascript), then you can easily output a generated client token using '@braintreeClientToken'.
 
 Below is an example:
 
@@ -54,7 +54,7 @@ Below is an example:
 
 #### braintree.js (v1)
 
-If you are using the lagacy version of braintree.js [documentation](https://www.braintreepayments.com/braintrust/braintree-js) you can output your client side encryption key into your blade views.
+If you are using the lagacy version of [braintree.js (v1)](https://www.braintreepayments.com/braintrust/braintree-js) you can output your client side encryption key into your blade views.
 
 The service provider extends the blade view to allow you to use the '@braintreeClientSideEncryptionKey' to output the CSE Key from your config file.
 
