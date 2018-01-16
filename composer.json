@@ -20,7 +20,7 @@
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "5.x",
-        "braintree/braintree_php": "^3.*"
+        "braintree/braintree_php": "3.*"
     },
     "autoload": {
         "classmap": [
